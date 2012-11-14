@@ -11,4 +11,6 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *greetingLabel;
 
+- (IBAction)tapToChangeGreeting:(UIButton *)sender;
+
 @end

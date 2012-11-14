@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-YV-UDF">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-YV-UDF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="LgI-F4-1fN"/>
                                 </constraints>
@@ -33,25 +33,44 @@
                                     <action selector="tapToChangeGreeting:" destination="2" eventType="touchUpInside" id="hYD-SU-8Tz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiS-3t-IrC">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANl-iQ-hu5">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="4kc-vj-cQp"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ANl-iQ-hu5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="198" id="57N-gE-Bl1"/>
+                            <constraint firstItem="ANl-iQ-hu5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5ZF-M2-P3h"/>
                             <constraint firstItem="fzM-YV-UDF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cem-yp-bLy"/>
                             <constraint firstAttribute="trailing" secondItem="fzM-YV-UDF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DuP-8t-VEE"/>
+                            <constraint firstAttribute="trailing" secondItem="ANl-iQ-hu5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gze-y1-Yjk"/>
                             <constraint firstAttribute="trailing" secondItem="2uJ-TZ-bVx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JWW-8j-jo8"/>
                             <constraint firstItem="2uJ-TZ-bVx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qe1-7H-J8y"/>
                             <constraint firstItem="fzM-YV-UDF" firstAttribute="top" secondItem="3" secondAttribute="top" constant="27" id="S4T-69-JSz"/>
+                            <constraint firstItem="oiS-3t-IrC" firstAttribute="top" secondItem="3" secondAttribute="top" constant="164" id="n8S-ek-eff"/>
+                            <constraint firstItem="oiS-3t-IrC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nQJ-pW-nYS"/>
                             <constraint firstAttribute="bottom" secondItem="2uJ-TZ-bVx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="o7w-hQ-XzQ"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="greetingLabel" destination="fzM-YV-UDF" id="lSu-e8-Vpd"/>
+                        <outlet property="passwordField" destination="ANl-iQ-hu5" id="62m-Qn-AVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125" y="55"/>
+            <point key="canvasLocation" x="-179" y="41"/>
         </scene>
     </scenes>
     <classes>
@@ -63,6 +82,8 @@
             <relationships>
                 <relationship kind="action" name="tapToChangeGreeting:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="greetingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

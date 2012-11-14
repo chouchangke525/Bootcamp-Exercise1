@@ -26,4 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*******************************************************************************
+ * @method      tapToChangeGreeting
+ * @abstract    Tap the button to change the greeting
+ * @description
+ *******************************************************************************/
+- (IBAction)tapToChangeGreeting:(UIButton *)sender {
+    self.greetingLabel.text = @"Goodbye";
+}
+
 @end

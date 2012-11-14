@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-179" y="41"/>
+            <point key="canvasLocation" x="-540" y="-321"/>
         </scene>
     </scenes>
     <classes>
@@ -84,7 +84,6 @@
                 <relationship kind="action" name="tapToChangeGreeting:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="greetingLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

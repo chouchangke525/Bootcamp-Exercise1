@@ -10,8 +10,8 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *greetingLabel;
-@property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+
 
 - (IBAction)tapToChangeGreeting:(UIButton *)sender;
 

@@ -4,7 +4,7 @@
 //
 //  Created by T. Andrew Binkowski on 11/13/12.
 //  Copyright (c) 2012 The University of Chicago, Department of Computer Science. All rights reserved.
-//
+// 
 
 #import "ViewController.h"
 
@@ -83,6 +83,8 @@
     
     // Dismiss the keyboard
     [textField resignFirstResponder];
+
+    return YES;
 }
 
 @end
